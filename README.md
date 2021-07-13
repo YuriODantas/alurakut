@@ -1,3 +1,2 @@
+![Alurakut](https://github.com/YuriODantas/alurakut/blob/main/public/images/banner-alurakut.jpg)
 # Projeto em construção...
-
-[]
