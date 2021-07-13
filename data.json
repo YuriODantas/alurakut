@@ -1,0 +1,84 @@
+{
+  "githubUser": "yuriodantas",
+  "comunidades": {
+    "id": "1",
+    "title": "Eu odeio acordar cedo",
+    "image": "https://alurakut.vercel.app/capa-comunidade-01.jpg"
+  },
+  "pessoasFavoritas": [
+    "peas",
+    "omariosouto",
+    "rafaballerini",
+    "juunegreiros",
+    "marcobrunodev",
+    "felipefialho"
+  ],
+  "colors": {
+    "colorOriginal": {
+      "menu": {
+        "backgroundPrimary": "#308BC5",
+        "boxLink": "#2E7BB4",
+        "underLine": "#ECF2FA",
+        "separator": "#5292C1",
+        "inputText": "#ffffff",
+        "inputBackground": "#5579A1",
+        "logoBackground": "#ffffff"
+      },
+      "profileSidebarMenu": {
+        "text": "#2E7BB4",
+        "backgroundPrimary": "#ffffff"
+      },
+      "box": {
+        "backgroundPrimary": "#ffffff",
+        "boxLinkText": "#2E7BB4",
+        "title": "#000000",
+        "subTitle": "#000000",
+        "smallTitle": "#333333",
+        "underLine": "#ECF2FA",
+        "inputBackground": "#F4F4F4",
+        "inputText": "#333333",
+        "buttonText": "#FFFFFF",
+        "buttonBackground": "#6F92BB"
+      },
+      "orkutNostalgicIconSet": {
+        "text": "#5A5A5A"
+      },
+      "container": {
+        "backgroundPrimary": "#d9e6f6"
+      }
+    },
+    "darkMode": {
+      "menu": {
+        "backgroundPrimary": "#2c3e50",
+        "boxLink": "#ffffff",
+        "underLine": "#2f3640",
+        "separator": "#2f3640",
+        "inputText": "#ffffff",
+        "inputBackground": "#34495e",
+        "logoBackground": "#ffffff"
+      },
+      "profileSidebarMenu": {
+        "text": "#ffffff",
+        "backgroundPrimary": "#34495e"
+      },
+      "box": {
+        "backgroundPrimary": "#2c3e50",
+        "boxLinkText": "#f1f1f1",
+        "title": "#ffffff",
+        "subTitle": "#ffffff",
+        "smallTitle": "#ffffff",
+        "underLine": "#2f3640",
+        "inputBackground": "#34495e",
+        "inputText": "#ffffff",
+        "buttonText": "#FFFFFF",
+        "buttonBackground": "#636e72"
+      },
+      "orkutNostalgicIconSet": {
+        "text": "#ffffff"
+      },
+      "container": {
+        "backgroundPrimary": "#34495e"
+      }
+    }
+  }
+}
