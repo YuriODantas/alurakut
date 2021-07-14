@@ -1,17 +1,14 @@
 import Box from '../Box';
 import { AlurakutProfileSidebarMenuDefault } from '../../lib/AlurakutCommons';
 
-function ProfileSideBar({ githubUser, themeMode, setThemeMode }) {
+function ProfileSideBar({ github, themeMode, setThemeMode }) {
   return (
     <Box as="aside">
-      <img
-        src={`https://github.com/${githubUser}.png`}
-        style={{ borderRadius: '8px' }}
-      />
+      <img src={github.avatar_url} style={{ borderRadius: '8px' }} />
       <hr />
       <p>
-        <a className="boxLink" href={`https://github.com/${githubUser}`}>
-          @{githubUser}
+        <a className="boxLink" href={github.html_url}>
+          @{github.login}
         </a>
       </p>
       <hr />

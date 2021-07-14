@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   AlurakutMenu,
   OrkutNostalgicIconSet,
@@ -12,41 +12,67 @@ import FormCommunity from '../src/components/FormCommunity';
 
 export default function Home({ themeMode, setThemeMode }) {
   const githubUser = data.githubUser;
-  const [comunidades, setComunidades] = useState([data.comunidades]);
   const pessoasFavoritas = data.pessoasFavoritas;
+  const [github, setGithub] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [comunidades, setComunidades] = useState([data.comunidades]);
+  const [seguidores, setSeguidores] = useState([]);
+
+  useEffect(() => {
+    fetch(`https://api.github.com/users/${githubUser}`)
+      .then(function (respostaDoServidor) {
+        return respostaDoServidor.json();
+      })
+      .then(function (respostaConvertida) {
+        setGithub(respostaConvertida);
+        fetch(respostaConvertida.followers_url)
+          .then(function (respostaDoServidor) {
+            return respostaDoServidor.json();
+          })
+          .then(function (respostaConvertida) {
+            setSeguidores(respostaConvertida);
+            setLoading(false);
+          });
+      });
+  }, [githubUser]);
 
   return (
     <>
-      <AlurakutMenu githubUser={githubUser} />
-      <MainGrid>
-        <div className="profileArea" style={{ gridArea: 'profileArea' }}>
-          <ProfileSideBar
-            githubUser={githubUser}
-            themeMode={themeMode}
-            setThemeMode={setThemeMode}
-          />
-        </div>
-        <div className="welcomeArea" style={{ gridArea: 'welcomeArea' }}>
-          <Box>
-            <h1 className="title">Bem vindo(a)</h1>
-            <OrkutNostalgicIconSet />
-          </Box>
-          <FormCommunity
-            comunidades={comunidades}
-            setComunidades={setComunidades}
-          />
-        </div>
-        <div
-          className="profileRelationsArea"
-          style={{ gridArea: 'profileRelationsArea' }}
-        >
-          <ProfileBoxDefault name="Comunidades" nameVar={comunidades} />
-          <ProfileBoxDefault
-            name="Pessoas da comunidade"
-            nameVar={pessoasFavoritas}
-          />
-        </div>
-      </MainGrid>
+      <AlurakutMenu github={github} />
+      {loading ? (
+        <h1 style={{ textAlign: 'center' }}>Carregando...</h1>
+      ) : (
+        <MainGrid>
+          <div className="profileArea" style={{ gridArea: 'profileArea' }}>
+            <ProfileSideBar
+              github={github}
+              themeMode={themeMode}
+              setThemeMode={setThemeMode}
+            />
+          </div>
+          <div className="welcomeArea" style={{ gridArea: 'welcomeArea' }}>
+            <Box>
+              <h1 className="title">Bem vindo(a), {github.name}</h1>
+              <OrkutNostalgicIconSet />
+            </Box>
+            <FormCommunity
+              comunidades={comunidades}
+              setComunidades={setComunidades}
+            />
+          </div>
+          <div
+            className="profileRelationsArea"
+            style={{ gridArea: 'profileRelationsArea' }}
+          >
+            <ProfileBoxDefault name="Seguidores" nameVar={seguidores} />
+            <ProfileBoxDefault name="Comunidades" nameVar={comunidades} />
+            <ProfileBoxDefault
+              name="Pessoas da Comunidade"
+              nameVar={pessoasFavoritas}
+            />
+          </div>
+        </MainGrid>
+      )}
     </>
   );
 }
