@@ -15,12 +15,12 @@ Foram 5 dias de aulas intensivas gratuitas de ReactJS e NextJS feita pela Alura 
 ## Tecnologias que foram usadas
 
 Para desenvolver os projetos, essas tecnologias foram usadas:
+* ![Orkut](https://github.com/YuriODantas/alurakut/blob/main/.github/logo-orkut-original.svg)
+* [![ReactJs](https://github.com/YuriODantas/alurakut/blob/main/.github/logo-react.svg)](https://pt-br.reactjs.org/)
+* [![Styled-components](https://github.com/YuriODantas/alurakut/blob/main/.github/logo-styled-components.svg)](https://styled-components.com/)
+* [![CSS](https://github.com/YuriODantas/alurakut/blob/main/.github/logo-css.svg)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+* [![JavaScript](https://github.com/YuriODantas/alurakut/blob/main/.github/logo-js.svg)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
-[![ReactJs](https://github.com/YuriODantas/alurakut/blob/main/.github/logo-react.svg)](https://pt-br.reactjs.org/)
-[![Styled-components](https://github.com/YuriODantas/alurakut/blob/main/.github/logo-styled-components.svg)](https://styled-components.com/)
-[![CSS](https://github.com/YuriODantas/alurakut/blob/main/.github/logo-css.svg)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-[![JavaScript](https://github.com/YuriODantas/alurakut/blob/main/.github/logo-js.svg)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-[![Orkut](https://github.com/YuriODantas/alurakut/blob/main/.github/logo-orkut-original.svg)]()
 
 ## Minhas considerações
 
